@@ -12,8 +12,8 @@ export default function Home() {
         <Logo></Logo>
         <Search></Search>
         <div className="flex gap-2 flex-wrap justify-center">
-          <PresetQuery query="Who said live long and prosper?"></PresetQuery>
-          <PresetQuery query="Why do we only see one side of the moon?"></PresetQuery>
+          <PresetQuery query="How to invest in Bitcoin ETF?"></PresetQuery>
+          <PresetQuery query="Who is the CEO of Binance?"></PresetQuery>
         </div>
         <Footer></Footer>
       </div>

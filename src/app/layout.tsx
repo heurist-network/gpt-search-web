@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Heurist Search",
-  description: "Powered by Heurist LLM API\n Built on Lepton",
+  description: "AI-based search engine powered by Heurist LLM API\n Deployed on Lepton",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
