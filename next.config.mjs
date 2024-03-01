@@ -9,7 +9,7 @@ export default (phase, { defaultConfig }) => {
       return [
         {
           source: "/query",
-          destination: "https://n2bifuff-search-with-lepton-v2-1.tin.lepton.run/query" // Proxy to Backend
+          destination: "https://n2bifuff-search-with-lepton-v2.tin.lepton.run/query" // Proxy to Backend
         }
       ];
     }
