@@ -13,6 +13,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      {!!(process.env.UMAMI_URL && process.env.UMAMI_WEBSITE_ID) && (
+        <script
+          async
+          src={process.env.UMAMI_URL}
+          data-website-id={process.env.UMAMI_WEBSITE_ID}
+        />
+      )}
       <body className={inter.className}>{children}</body>
     </html>
   );
