@@ -1,20 +1,17 @@
-import { PresetQuery } from "@/app/components/preset-query";
-import { Skeleton } from "@/app/components/skeleton";
-import { Wrapper } from "@/app/components/wrapper";
-import { Relate } from "@/app/interfaces/relate";
-import { MessageSquareQuote } from "lucide-react";
-import React, { FC } from "react";
+import { MessageSquareQuote } from 'lucide-react'
+import React, { FC } from 'react'
+
+import { PresetQuery } from '@/app/components/preset-query'
+import { Skeleton } from '@/app/components/skeleton'
+import { Wrapper } from '@/app/components/wrapper'
+import { Relate } from '@/app/interfaces/relate'
 
 export const Relates: FC<{ relates: Relate[] | null }> = ({ relates }) => {
   return (
     <Wrapper
-      title={
-        <>
-          <MessageSquareQuote></MessageSquareQuote> Related
-        </>
-      }
+      title={<>Related · {relates && relates.length}</>}
       content={
-        <div className="flex gap-2 flex-col">
+        <div className="flex flex-col gap-2">
           {relates !== null ? (
             relates.length > 0 ? (
               relates.map(({ question }) => (
@@ -25,13 +22,13 @@ export const Relates: FC<{ relates: Relate[] | null }> = ({ relates }) => {
             )
           ) : (
             <>
-              <Skeleton className="w-full h-5 bg-zinc-200/80"></Skeleton>
-              <Skeleton className="w-full h-5 bg-zinc-200/80"></Skeleton>
-              <Skeleton className="w-full h-5 bg-zinc-200/80"></Skeleton>
+              <Skeleton className="h-5 w-full bg-zinc-200/80"></Skeleton>
+              <Skeleton className="h-5 w-full bg-zinc-200/80"></Skeleton>
+              <Skeleton className="h-5 w-full bg-zinc-200/80"></Skeleton>
             </>
           )}
         </div>
       }
     ></Wrapper>
-  );
-};
+  )
+}

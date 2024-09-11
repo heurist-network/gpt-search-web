@@ -1,14 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ReactNode } from "react";
+import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
 
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css'
+
+import { ReactNode } from 'react'
+
+import Header from './components/header'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Heurist Search",
-  description: "AI-based search engine powered by Heurist LLM API\n Deployed on Lepton",
-};
+  title: 'Heurist Search',
+  description:
+    'AI-based search engine powered by Heurist LLM API\n Deployed on Lepton',
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -20,7 +25,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           data-website-id={process.env.UMAMI_WEBSITE_ID}
         />
       )}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
-  );
+  )
 }

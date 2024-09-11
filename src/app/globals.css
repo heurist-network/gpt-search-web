@@ -13,3 +13,57 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-background-clip: text;
 }
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px); /* 初始虚化效果 */
+  z-index: -1; /* 确保背景图在所有内容的后面 */
+  animation: breatheBlur 10s ease-in-out infinite; /* 添加呼吸效果动画 */
+}
+
+@keyframes breatheBlur {
+  0%, 100% {
+    filter: blur(8px); /* 初始虚化效果 */
+  }
+  50% {
+    filter: blur(20px); /* 呼吸效果的最大虚化 */
+  }
+}
+
+@layer base {
+  .prose {
+    @apply text-gray-800;
+  }
+  .prose p {
+    margin:0px;
+  }
+  .prose ol {
+    margin:0px;
+  }
+  .prose ul,.prose li, .prose li span {
+    margin:0px;
+  }
+  .prose li span span {
+    line-height: 24px;
+  }
+  .prose li {
+    line-height: 2;
+  }
+
+  /* 添加更多自定义样式 */
+}
