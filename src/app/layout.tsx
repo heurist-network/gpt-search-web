@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Heurist Search',
+
   description:
     'AI-based search engine powered by Heurist LLM API\n Deployed on Lepton',
 }
