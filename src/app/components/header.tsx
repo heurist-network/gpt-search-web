@@ -16,7 +16,7 @@ const Header = () => {
               className="inline-block"
             />
           </a>
-          <div className="flex hidden items-center md:block">
+          <div className="flex hidden items-center md:flex">
             <span className="mx-6 h-4 border-l border-gray-300"></span>
             <a
               href="https://heurist.ai/portal"
