@@ -16,38 +16,40 @@ const Header = () => {
               className="inline-block"
             />
           </a>
-          <span className="mx-6 h-4 border-l border-gray-300"></span>
-          <a
-            href="https://heurist.ai/portal"
-            target="_blank"
-            className="flex items-center text-base font-normal"
-          >
-            Heurist Portal
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div className="flex hidden items-center md:block">
+            <span className="mx-6 h-4 border-l border-gray-300"></span>
+            <a
+              href="https://heurist.ai/portal"
+              target="_blank"
+              className="flex items-center text-base font-normal"
             >
-              <path
-                d="M11 5L4 12"
-                stroke="#000"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5 4L11.95 4.049L12 11"
-                stroke="#000"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+              Heurist Portal
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 5L4 12"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 4L11.95 4.049L12 11"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div className="flex items-center text-sm">
+        <div className="hidden items-center text-sm md:flex">
           <span>If you need a low-cost and performant LLM API!</span>
           <a
             href="https://dev-api-form.heurist.ai/"

@@ -7,13 +7,13 @@ import { SearchForm } from '@/app/components/search-form'
 
 export const Search: FC = () => {
   return (
-    <div className="w-[640px] rounded-2xl bg-gray-100">
+    <div className=" rounded-2xl  bg-gray-100 md:w-[640px]">
       {' '}
       {/* 外部灰色容器 */}
       <div className="flex h-[88px] items-center rounded-2xl bg-white">
         <SearchForm />
       </div>
-      <div className="flex space-x-2 px-6 py-3 text-[12px]/[18px]">
+      <div className="flex flex-col space-x-0 space-y-2 px-6 py-3 text-[12px]/[18px] md:flex-row md:space-x-2 md:space-y-0">
         {' '}
         {/* 推荐搜索项容器 */}
         <PresetQuery query="How to invest in Bitcoin ETF?" />
