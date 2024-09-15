@@ -17,7 +17,7 @@ export const SearchForm: FC<SearchFormProps> = ({
 }) => {
   const router = useRouter()
   const [value, setValue] = useState(query || '')
-  const [isFocused, setIsFocused] = useState(false)
+  const [isFocused, setIsFocused] = useState(true)
 
   return (
     <form
