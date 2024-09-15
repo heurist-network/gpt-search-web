@@ -32,13 +32,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       )}
       <body className={inter.className}>
         <Header />
-        <div className="absolute inset-0">
+        <div className="fixed inset-0 z-[-1]">
           {/* 背景图片 */}
           <div className="flex h-screen items-center justify-center">
             <img
               src="/bg.jpg"
               alt="Background"
-              className="fixed inset-0 bottom-0 bottom-0 left-0 right-0 top-0 z-[-1] h-full w-full object-cover object-center blur-md"
+              className=" inset-0 bottom-0 bottom-0 left-0 right-0 top-0 z-[-1] h-full w-full object-cover object-center blur-md"
             />
           </div>
         </div>

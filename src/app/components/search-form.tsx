@@ -37,6 +37,12 @@ export const SearchForm: FC<SearchFormProps> = ({
           onChange={(e) => setValue(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault()
+              router.push(getSearchUrl(encodeURIComponent(value), nanoid()))
+            }
+          }}
           autoFocus
           placeholder="How to..."
           maxLength={100}

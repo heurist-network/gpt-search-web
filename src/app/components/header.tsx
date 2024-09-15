@@ -21,7 +21,7 @@ const Header = () => {
             <a
               href="https://heurist.ai/portal"
               target="_blank"
-              className="flex items-center text-base font-normal"
+              className="flex items-center overflow-hidden text-ellipsis whitespace-nowrap text-base font-normal"
             >
               Heurist Portal
               <svg
@@ -50,11 +50,13 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden items-center text-sm md:flex">
-          <span>If you need a low-cost and performant LLM API!</span>
+          <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+            If you need a low-cost and performant LLM API!
+          </span>
           <a
             href="https://dev-api-form.heurist.ai/"
             target="_blank"
-            className="ml-2 flex flex-nowrap items-center rounded-full bg-black px-4 py-1 pr-1 text-white"
+            className="ml-2 flex flex-nowrap items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-4 py-1 pr-1 text-white"
           >
             Get an API Key
             <span className="ml-2 rounded-full bg-white p-1">

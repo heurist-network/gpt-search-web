@@ -12,7 +12,7 @@ export default function SearchPage() {
   const rid = decodeURIComponent(searchParams.get('rid') || '')
   console.log('query--', query)
   return (
-    <div className="inset-4 mx-auto flex h-min max-w-3xl flex-col justify-center space-y-4 px-4  md:inset-8">
+    <div className="inset-4 mx-auto flex h-min max-w-3xl flex-col justify-center space-y-4 px-4 pb-10  md:inset-8">
       <div className="m-auto flex w-full items-center justify-center md:w-[640px] ">
         <div className="w-full">
           <SearchForm hideBorder query={query}></SearchForm>
