@@ -4,6 +4,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { ReactNode } from 'react'
+import Image from 'next/image'
+
+// 删除这行
+// import Bg from './bg.jpg'
 
 import Header from './components/header'
 
@@ -28,6 +32,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       )}
       <body className={inter.className}>
         <Header />
+        <div className="absolute inset-0">
+          {/* 背景图片 */}
+          <div className="flex h-screen items-center justify-center">
+            <img
+              src="/bg.jpg"
+              alt="Background"
+              className="fixed inset-0 bottom-0 bottom-0 left-0 right-0 top-0 z-[-1] h-full w-full object-cover object-center blur-md"
+            />
+          </div>
+        </div>
         {children}
       </body>
     </html>
