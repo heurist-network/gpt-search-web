@@ -33,7 +33,7 @@ export const Title = ({ query }: { query: string }) => {
           type="button"
           className="flex items-center gap-2 rounded bg-transparent px-2 py-1 text-xs font-semibold text-[#696963] hover:bg-zinc-100"
         >
-          <RefreshCcw size={12}></RefreshCcw>Rewrite
+          <RefreshCcw size={12}></RefreshCcw>Regenerate
         </button>
       </div>
     </div>

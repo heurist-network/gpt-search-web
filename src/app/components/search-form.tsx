@@ -44,7 +44,7 @@ export const SearchForm: FC<SearchFormProps> = ({
             }
           }}
           autoFocus
-          placeholder="How to..."
+          placeholder="Ask anything..."
           maxLength={100}
           className={`mx-6 w-5/6 flex-1 ${hideBorder ? '' : 'border-b'} overflow-hidden text-ellipsis whitespace-nowrap bg-[transparent] py-4 pr-10 text-2xl outline-none focus:border-[#1d1d1b]`}
         />

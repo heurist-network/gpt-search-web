@@ -19,11 +19,11 @@ const Header = () => {
           <div className="flex hidden items-center md:flex">
             <span className="mx-6 h-4 border-l border-gray-300"></span>
             <a
-              href="https://heurist.ai/portal"
+              href="https://heurist.ai"
               target="_blank"
               className="flex items-center overflow-hidden text-ellipsis whitespace-nowrap text-base font-normal"
             >
-              Heurist Portal
+              Heurist Protocol
               <svg
                 width="16"
                 height="16"
@@ -50,9 +50,6 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden items-center text-sm md:flex">
-          <span className="overflow-hidden text-ellipsis whitespace-nowrap">
-            If you need a low-cost and performant LLM API!
-          </span>
           <a
             href="https://dev-api-form.heurist.ai/"
             target="_blank"
