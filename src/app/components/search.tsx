@@ -1,52 +1,22 @@
-"use client";
-import { getSearchUrl } from "@/app/utils/get-search-url";
-import { ArrowRight } from "lucide-react";
-import { nanoid } from "nanoid";
-import { useRouter } from "next/navigation";
-import React, { FC, useState } from "react";
+'use client'
+
+import React, { FC, useState } from 'react'
+
+import { PresetQuery } from '@/app/components/new-preset-query'
+import { SearchForm } from '@/app/components/search-form'
 
 export const Search: FC = () => {
-  const [value, setValue] = useState("");
-  const router = useRouter();
-
-  // const [rid, setRid] = useState("");
-
-  // useEffect(() => {
-  //   // Generate the ID once when the component mounts
-  //   const id = nanoid();
-  //   setRid(id);
-  // }, []);
-
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (value) {
-          setValue("");
-          router.push(getSearchUrl(encodeURIComponent(value), nanoid()));
-          // router.push(getSearchUrl(encodeURIComponent(value), rid));
-        }
-      }}
-    >
-      <label
-        className="relative bg-white flex items-center justify-center border ring-8 ring-zinc-300/20 py-2 px-2 rounded-lg gap-2 focus-within:border-zinc-300"
-        htmlFor="search-bar"
-      >
-        <input
-          id="search-bar"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          autoFocus
-          placeholder="Ask Heurist AI anything ..."
-          className="px-2 pr-6 w-full rounded-md flex-1 outline-none bg-white"
-        />
-        <button
-          type="submit"
-          className="w-auto py-1 px-2 bg-black border-black text-white fill-white active:scale-95 border overflow-hidden relative rounded-xl"
-        >
-          <ArrowRight size={16} />
-        </button>
-      </label>
-    </form>
-  );
-};
+    <div className=" rounded-2xl  bg-gray-100 md:w-[640px]">
+      {' '}
+      <div className="flex h-[88px] items-center rounded-2xl bg-white">
+        <SearchForm />
+      </div>
+      <div className="flex flex-col space-x-0 space-y-2 px-6 py-3 text-[12px]/[18px] md:flex-row md:space-x-2 md:space-y-0">
+        {' '}
+        <PresetQuery query="What is stablecoin?" />
+        <PresetQuery query="How to farm crypto airdrops?" />
+      </div>
+    </div>
+  )
+}
