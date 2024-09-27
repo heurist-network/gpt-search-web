@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { ReactNode } from 'react'
-import Image from 'next/image'
+import Script from 'next/script'
 
 // 删除这行
 // import Bg from './bg.jpg'
@@ -21,15 +21,29 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
   return (
     <html lang="en">
-      {!!(process.env.UMAMI_URL && process.env.UMAMI_WEBSITE_ID) && (
-        <script
-          async
-          src={process.env.UMAMI_URL}
-          data-website-id={process.env.UMAMI_WEBSITE_ID}
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         />
-      )}
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         <div className="fixed inset-0 z-[-1]">
